@@ -1,0 +1,6 @@
+{
+  "name": "API División Política",
+  "description": "Microservicio RESTful para gestión de división política (países, regiones y ciudades) con documentación Swagger y explorador interactivo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
