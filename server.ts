@@ -1,6 +1,6 @@
+import process from 'node:process';
 import express from 'express';
 import path from 'path';
-import { fileURLToPath } from 'url';
 import { createServer as createViteServer } from 'vite';
 import conexionBD from './server/repositorios/bd.ts';
 import paisRutas from './server/rutas/pais.rutas.ts';
@@ -8,12 +8,9 @@ import regionRutas from './server/rutas/region.rutas.ts';
 import ciudadRutas from './server/rutas/ciudad.rutas.ts';
 import swaggerConfig from './server/configuracion/swagger.ts';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = process.env.PORT || 3030;
 
   // Middlewares
   app.use(express.json());
